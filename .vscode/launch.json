@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0", // Optional, depending on context
+    "configurations": [
+      {
+        "name": "(gdb) Launch",
+        "type": "cppdbg",
+        "preLaunchTask": "c++ build for AtCoder",
+        "request": "launch",
+        "program": "${workspaceFolder}/a.out",
+        "args": [
+          "<",
+          "${workspaceFolder}/debug.in"
+        ],
+        "stopAtEntry": false,
+        "cwd": "${fileDirname}",
+        "environment": [], // Add environment variables if needed
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true // Added for robustness
+          },
+          {
+            "description": "Set Disassembly Flavor to Intel",
+            "text": "-gdb-set disassembly-flavor intel",
+            "ignoreFailures": true // Added for robustness
+          }
+        ]
+      }
+    ]
+  }
+  
