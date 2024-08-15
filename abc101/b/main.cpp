@@ -39,7 +39,8 @@ void solve(){
         sum += n%10;
         n/=10;
     }
-    if(m%sum == 0)cout<<"Yes"<<ln;
+    if(sum==0)cout<<"No"<<ln;
+    if((m%sum) == 0)cout<<"Yes"<<ln;
     else cout<<"No"<<ln;
     return;
 }

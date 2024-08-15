@@ -7,7 +7,8 @@
         "compilerPath": "/usr/bin/gcc",
         "includePath": [
           "${workspaceFolder}/**",
-          "${workspaceFolder}/ac-library/"
+          "${workspaceFolder}/ac-library/",
+          "~/AtCoderSolution/ac-library"
         ],
         "defines": [],
         "cStandard": "c11",
